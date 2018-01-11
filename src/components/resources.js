@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default class Resources extends Component {
+export default () => {
   return (
     <div>
       Secret Margarita Recipe
@@ -10,5 +10,6 @@ export default class Resources extends Component {
         <li> 1 Part Tajin </li>
       </ul>
     </div>
-  )
+  );
+
 }

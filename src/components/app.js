@@ -7,6 +7,9 @@ export default class App extends Component {
     return (
       <div>
         <Header />
+        //a gotcha in React Router, have to tell the App
+        //if it ever gets passed any children, to show them
+        {this.props.children}
       </div>
     );
   }

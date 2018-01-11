@@ -6,24 +6,24 @@ class Header extends Component {
     return <button> Sign In</button>
   }
 
-  render( {
+  render(){
     return (
       <nav className="navbar navbar-light">
         <ul className="nav navbar-nav">
           <li className="nav-item">
-            <Link to"/"> Home </Link>
+            <Link to="/"> Home </Link>
           </li>
           <li className="nav-item">
-            <Link to"/resources"> Resources </Link>
+            <Link to="/resources"> Resources </Link>
           </li>
           <li className="nav-item">
             {this.authButton()}
-            <Link to"/"> </Link>
+            <Link to="/"> </Link>
           </li>
         </ul>
       </nav>
     )
-  })
+  }
 }
 
 export default Header;
