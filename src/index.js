@@ -5,6 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Router, Route, browserHistory } from 'react-router';
 
 import App from './components/app';
+import Resources from './components/resources';
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
@@ -12,6 +13,9 @@ const createStoreWithMiddleware = applyMiddleware()(createStore);
 //Super Component w/adtl functionality
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
+    <Router history={browserHistory}>
+      <Route path="/" component={App}/>
+      <Route path="/resources" component={Resources}/>
+    <Router />
   </Provider>
   , document.querySelector('.container'));
